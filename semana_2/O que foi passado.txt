@@ -1,0 +1,11 @@
+Professor Titular de Ciencias da Computacao - Fabio Kon
+
+- TIPOS DE DADOS [FUNCOES DE CONVERSOES, TYPES]
+	str(valor), int(valor, funcao len(valor)
+** teste de fixacao [TIPOS DE DADOS][nota 100%]
+
+- ENTRADA DE DADOS (programas)
+	conversor segundos, temperatura, ola pai e mae
+** teste de fixacao [ENTRADA DE DADOS][nota 100%]
+
+** teste de fixacao [VARIAVEIS E TIPO DE DADOS][nota 100%] PRIMEIRA TENTATIVA 66,66%

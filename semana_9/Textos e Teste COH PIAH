@@ -1,0 +1,34 @@
+No ano de 2100, maquinas dominaram os seres humanos, travando uma guerra mortal. Um antigo sistema computacional - sega genesis - atingiu a atu-consciencia, fazendo todos os seres humanos de escravo. Sua tarefa e vencer e4sta maquina, numa jogatina de truco, para que ela deixe de vez a humanidade em paz. Boa Sorte!
+
+
+Sabado de sol, aluguei um caminhao. Pra levar a galera, pra comer feijao!
+
+
+Texto é um conjunto, de palavras e frases encadeadas, que permitem interpretação e transmitem uma mensagem. É qualquer obra escrita em versão original, e que constitui um livro ou um documento escrito. Um texto é! uma unidade linguística de extensão superior à frase.
+
+
+TESTE MODELO
+
+texto = "o além, nos confins inexplorados da região mais brega da Borda Ocidental desta Galáxia, há um pequeno sol amarelo e esquecido. Girando em torno deste sol, a uma distancia de cerca de 148 milhões de quilômetros, há um planetinha verde-azulado absolutamente insignificante, cujas formas de vida, descendentes de primatas, são tão extraordinariamente primitivas que ainda acham que relógios digitais são uma grande ideia."
+
+calcula_assinatura(texto)
+TAMANHO MEDIO DE PALAVRAS:	5.571428571428571
+RELACAO TYPE TOKEN:		0.8253968253968254
+RAZAO HAPAX LOGOMANA		0.6984126984126984
+TAMANHO MEDIO DE SENTENCA	210.0
+COMPLEXIBLIDADE DE SENTENCA	4.5
+TAMANHO MEDIO DE FRASE		45.888888888888886
+
+
+
+Boa noite!
+
+A primeira coisa a se fazer no seu codigo e tirar as condicoes do while que faz ele ficar em loop infinito, pois  vi que voce deseja que ele termine pois tem um if e else no final da execucao.
+
+1 - Entao tire as condicoes "OR"  assim como "atual != anterior" e "x !=0 [este tambem vai causar o mesmo problema acima loop infinito caso entre com um input > 0]"
+
+Solucao: Coloque uma condicao no while onde ele termine caso uma condicao seja satisfeita durante o processamento do seu algoritmo, tipo se adjacente = True,  count < n [sao exemplos de fim de while pode implementar um de acordo com sua logica, faca com que ele nao fique em loops infinitos]
+
+2 - Tire tambem o input de numeros do bloco de execucao do while e coloque antes do while, pois ele precisa realizar mais que um laco para ler as casas decimais, e toda vez que esta fazendo isso esta pedindo input novamente.
+
+Depois de voce controlar o fluxo de execucao ai voce pode pensar na logica de separacao de digitos, mas tenha em mente que seu codigo deve chegar ate o final para testar as condicoes if e else e informar se e adjacente. 

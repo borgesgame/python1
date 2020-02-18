@@ -22,4 +22,4 @@ Professor Titular de Ciencias da Computacao - Fabio Kon
 - LEITURA LIVRO
 
 
-##TESTE DE ATUALIZACAO DO GIT
+##TESTE DE ATUALIZACAO DO GIT.

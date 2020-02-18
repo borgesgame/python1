@@ -20,3 +20,6 @@ Professor Titular de Ciencias da Computacao - Fabio Kon
 - QUATRO MANEIRAS DE RODAR O PYTHON
 - SOFTWARE LIVRE - COM NELSON POSSE Lgo (gerente tecnio do CCSL)
 - LEITURA LIVRO
+
+
+##TESTE DE ATUALIZACAO DO GIT

@@ -7,13 +7,43 @@ import re
 
 def main():
 
-    ass_input = le_assinatura()
+    print("\nBem-vindo ao detector automático de COH-PIAH.\n")
 
-    textos = le_textos()
+    escolha = -1
 
-    avalia_textos(textos, ass_input)
+    while escolha != 0:
+        print("\nEsolha uma opção [1] [2]\n")
+        print("[1] Informe uma assinatura e textos para achar copiadores :)")
+        print("[2] Gere a assinatura contendo os tracos linguisticos de um texto")
+        print("[3] Compare varios textos para achar similaridades ")
+        escolha = int(input("escolha uma opção: "))
 
+        if escolha == 1:# OPCAO 1 - Informe uma assinatura e textos para achar copiadores 
+            ass_input = le_assinatura()
+            textos = le_textos()
+            avalia_textos(textos, ass_input)
+            print("\n\n\n")
+            
+        elif escolha == 2:
+            texto = input("\nDigite o texto (aperte enter para enviar):")
+            ass_texto = calcula_assinatura(texto)
+            print("\nAssinatura calculada:\n")
 
+            print("Tamanho medio de palavra      : ",ass_texto[0])
+            print("Relação Type-Token            : ",ass_texto[1])
+            print("Razão Hapax Legomana          : ",ass_texto[2])
+            print("Tamanho médio de sentença     : ",ass_texto[3])
+            print("Complexidade média da sentença: ",ass_texto[4])
+            print("Tamanho medio de frase        : ",ass_texto[5])
+
+            print("\n\n\n")
+
+        elif escolha ==3:
+            textos = le_textos()
+            compara_entresi(textos)
+            
+    print("Obrigado por utilizar, ate mais :-)!!")
+    
 def torna_positivo(num):
 
     if num < 0:
@@ -21,8 +51,29 @@ def torna_positivo(num):
                     
     return num
 
+def compara_entresi(textos):
+    '''Esta parte compara os textos entre si para achar o grau de similaridade'''
+    texto1 = 0
+    print(" ________________________________________________")
+    print("|        COMPARANDO        |     RESULTADOS      |")
+    for item in textos:
+        texto1 += 1
+        texto2 = 0
+        
+        ass_base = calcula_assinatura(item)
+        count = 0
+        while count < len(textos):
+            texto2 += 1
+            
+            ass_comp = calcula_assinatura(textos[count])            
+            if item != textos[count]:
+                print("|  Texto(",texto1,") e Texto(",texto2,") | ",compara_assinatura(ass_base,ass_comp))
+                
+                
+            count = count + 1
+    print("--------------------------------------------------")
 
-
+    
 def le_assinatura():
     '''A funcao le os valores dos tracos linguisticos do modelo e devolve uma assinatura a ser comparada com os textos fornecidos'''
     print("\nBem-vindo ao detector automático de COH-PIAH.\n")
@@ -164,8 +215,8 @@ def avalia_textos(textos, ass_cp):
         if sorted(lista_grau)[0] == lista_grau[count]:
             i =  count
             
-    
-    #print("\nO autor do texto",coh_piah[i],"está infectado com COH-PIAH")
+    print("\n"+ str(len(textos)) +"textos verificados:\n")
+    print("O autor do texto",coh_piah[i],"está infectado com COH-PIAH")
 
     return coh_piah[i]
 

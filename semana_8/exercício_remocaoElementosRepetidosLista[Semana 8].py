@@ -16,6 +16,6 @@ def remove_repetidos(lista):
             x = x - 1
 
     
-    #lista.sort()
+    #lista.sort() modifica a lista permanentemente
 
     return sorted(lista)

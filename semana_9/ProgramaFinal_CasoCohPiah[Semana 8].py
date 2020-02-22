@@ -14,7 +14,7 @@ def main():
     while escolha != 0:
         print("\nEsolha uma opção [1] [2]\n")
         print("[1] Informe uma assinatura e textos para achar copiadores :)")
-        print("[2] Gere a assinatura contendo os tracos linguisticos de um texto")
+        print("[2] Gere a assinatura atraves dos tracos linguisticos de um texto")
         print("[3] Compare varios textos para achar similaridades ")
         escolha = int(input("escolha uma opção: "))
 
@@ -22,7 +22,7 @@ def main():
             ass_input = le_assinatura()
             textos = le_textos()
             avalia_textos(textos, ass_input)
-            print("\n\n\n")
+            print("\n\n")
             
         elif escolha == 2:
             texto = input("\nDigite o texto (aperte enter para enviar):")
@@ -36,11 +36,12 @@ def main():
             print("Complexidade média da sentença: ",ass_texto[4])
             print("Tamanho medio de frase        : ",ass_texto[5])
 
-            print("\n\n\n")
+            print("\n\n")
 
         elif escolha ==3:
             textos = le_textos()
             compara_entresi(textos)
+            print("\n\n")
             
     print("Obrigado por utilizar, ate mais :-)!!")
     
@@ -53,9 +54,13 @@ def torna_positivo(num):
 
 def compara_entresi(textos):
     '''Esta parte compara os textos entre si para achar o grau de similaridade'''
-    texto1 = 0
+    
+    print("\nAssinatura calculada:\n")
+    
     print(" ________________________________________________")
     print("|        COMPARANDO        |     RESULTADOS      |")
+
+    texto1 = 0
     for item in textos:
         texto1 += 1
         texto2 = 0
